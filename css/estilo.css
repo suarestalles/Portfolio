@@ -75,24 +75,22 @@ a:hover{
 }
 .main-content-section{
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 28px;
     border-top: solid 5px #0084b8;
 }
 .home{
     border-top: none;
-    padding-top: 2%;
-    margin-bottom: 5%;
+    padding: 2%;
 }
 .main-content-section h1{
     font-size: 36px;
+    padding: 28px 0;
 }
 .main-content-section p{
     line-height: 1.5em;
-    font-size: 24px;
+    font-size: 14px;
 }
 .recent-works{
-    display: flex;
-    flex-direction: column;
     align-items: center;
     border-top: solid 5px #0084b8;
     margin-bottom: 3%;
@@ -116,6 +114,7 @@ a:hover{
 .recent-works h3, .main-content-section h3{
     font-size: 28px;
     padding: 1em 0;
+    text-align: center;
 }
 .recent-works-card-title{
     font-size: 22px;
@@ -132,45 +131,48 @@ a:hover{
 
 .action-user{
     align-items: center;
-    padding-top: 3em;
+}
+.action-user label{
+    display: none;
 }
 .action-user form{
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1em;
-    margin-bottom: 2em;
 }
-.action-user form label{
-    display: none;
+.action-user .id-user{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
 }
-.action-user form input[type="text"]{
-    display: inline-block;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    padding: 20px;
+.action-user form input[type="text"]:hover, .action-user form input[type="email"]:hover, textarea:hover{
+    border: 1px solid #0084b8;
+}
+input, textarea{
+    border: 1px solid #fff;
+    transition: .5s;
     background: #111313;
+    color: #fff;
     border-radius: 5px;
-    border: 2px solid #ccc;
-    font-size: 22px;
-}
-.action-user form textarea{
-    height: 150px;
-    background: #111313;
-    border-radius: 5px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border: 2px solid #ccc;
-    padding: 20px;
-    font-size: 22px;
-    resize: none;
-}
-.action-user form .button-default{
     font-size: 16px;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    padding: 15px;
+    resize: vertical;
+    max-height: 250px;
+}
+input:focus, textarea:focus{
+    box-shadow: 0;
+    outline: 0;
+    border: 1px solid #0084b8;
+}
+.action-user input[name="message"]{
+    padding: 70px 10px;
 }
 .action-user address{
-    padding-bottom: 3%;
+    padding: 3% 0;
+    text-decoration: underline;
+    font-size: 10px;
 }
 footer{
 	color: white;
@@ -186,9 +188,6 @@ footer{
 
 .social-networks a{
     margin: 5%;
-}
-.social-networks .links{
-    padding-top: 5%;
 }
 .social-networks .links a img{
     width: 50px;
@@ -247,12 +246,15 @@ footer{
     .cards img:hover{
         opacity: .3;
     }
-    .recent-works h3, .main-content-section h3{
-        font-size: 28px;
-        padding: 1em 0;
-    }
     .recent-works-card-title{
         font-size: 22px;
         padding: .5em 0;
+    }
+    .action-user .id-user{
+        flex-direction: row;
+
+    }
+    .action-user .id-user input{
+        width: 100%;
     }
 }
