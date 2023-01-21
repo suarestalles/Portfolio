@@ -147,6 +147,9 @@ a:hover{
     width: 100%;
     gap: 10px;
 }
+.action-user form input[class="name_page"]{
+    display: none;
+}
 .action-user form input[type="text"]:hover, .action-user form input[type="email"]:hover, textarea:hover{
     border: 1px solid #0084b8;
 }
